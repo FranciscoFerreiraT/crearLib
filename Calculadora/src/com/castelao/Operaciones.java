@@ -21,7 +21,7 @@ public class CalcBasic {
     public static float[] operacion(float numero1, float numero2, int opcion) {
 
        
-
+//Utilizacion de try-catch para que el codigo sea robusto y no pueda dar lugar a fallos//
 
         switch (opcion) {
 
