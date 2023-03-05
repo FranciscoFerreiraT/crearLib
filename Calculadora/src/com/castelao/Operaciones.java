@@ -2,10 +2,10 @@ package com.castelao;
 
 
 public class CalcBasic {
-    
+ // Creacion de variables con las que el usuario selecciona que operacion hacer//
 
     public static final int SUMA = 1;
-   
+  
     public static final int RESTA = 2;
  
     public static final int MULTIPLICACION = 3;
