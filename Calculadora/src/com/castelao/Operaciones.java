@@ -1,22 +1,80 @@
 package com.castelao;
 
-public class Operaciones {
-    public static void operacionesBasicasConTryCatch(double num1, double num2) {
+
+public class CalcBasic {
+    
+
+    public static final int SUMA = 1;
+   
+    public static final int RESTA = 2;
+ 
+    public static final int MULTIPLICACION = 3;
+   
+    public static final int DIVISION = 4;
+  
+    public static final int RAIZ = 5;
+  
+    public static final float[] RESULTADO= new float[1];
 
 
-        try {
-            double suma = num1 + num2;
-            double resta = num1 - num2;
-            double multiplicacion = num1 * num2;
-            double division = num1 / num2;
+ 
+    public static float[] operacion(float numero1, float numero2, int opcion) {
+
+       
 
 
-            System.out.println("Suma: " + suma);
-            System.out.println("Resta: " + resta);
-            System.out.println("Multiplicación: " + multiplicacion);
-            System.out.println("División: " + division);
-        } catch (ArithmeticException e) {
-            System.out.println("Error");
+        switch (opcion) {
+
+            case SUMA:
+                try {
+                    RESULTADO[0] = numero1 + numero2;
+                } catch (NullPointerException exception) {
+                    return null;
+                }
+
+                return RESULTADO;
+
+            case RESTA:
+
+                try {
+                    RESULTADO[0] = numero1 - numero2;
+                } catch (NullPointerException exception) {
+                    return null;
+                }
+
+                return RESULTADO;
+
+            case MULTIPLICACION:
+
+                try {
+                    RESULTADO[0] = numero1 * numero2;
+                } catch (NullPointerException exception) {
+                    return null;
+                }
+
+                return RESULTADO;
+
+            case DIVISION:
+
+                try {
+                    RESULTADO[0] = Math.round(numero1 / numero2);
+                } catch (NullPointerException exception) {
+                    return null;
+                }
+
+                return RESULTADO;
+
+            case RAIZ:
+                try {
+                    RESULTADO[0] = (float) Math.pow(numero1, 1/numero2);
+                } catch (NullPointerException exception) {
+                    return null;
+                }
+                return RESULTADO;
+
+            default:
+
+                return null;
         }
     }
 }
